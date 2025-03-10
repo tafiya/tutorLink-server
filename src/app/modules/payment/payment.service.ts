@@ -92,3 +92,12 @@ export const handleFailedOrCanceledPayment = async (transactionId: string, statu
 
     return order;
 };
+export const getMyBookingsFromDB = async (userEmail: string) => {
+  
+      return await Payment.find({ userEmail })
+  
+  };
+  export const getBookingsForTutor = async (tutorId: string) => {
+    const requests = await Payment.find({ tutorId }).exec();
+    return requests;
+  };

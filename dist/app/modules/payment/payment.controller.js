@@ -38,14 +38,14 @@ const successPayment = (req, res) => __awaiter(void 0, void 0, void 0, function*
     const order = yield payment_model_1.default.findOne({ transaction: transactionId });
     console.log(order);
     yield request_model_1.default.findByIdAndUpdate(order === null || order === void 0 ? void 0 : order.requestId, { isPayment: true }, { new: true });
-    return res.redirect(`https://tutorlink-frontend-1vtb2mly7-tafiyas-projects.vercel.app/success/${transactionId}`);
+    return res.redirect(`https://tutor-link-frontend-project.vercel.app/success/${transactionId}`);
 });
 exports.successPayment = successPayment;
 const failPayment = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { transactionId } = req.params;
     console.log("Payment failed", transactionId);
     const result = yield (0, payment_service_1.handleFailedOrCanceledPayment)(transactionId, "failed");
-    return res.redirect(`https://tutorlink-frontend-1vtb2mly7-tafiyas-projects.vercel.app/fail`);
+    return res.redirect(`https://tutor-link-frontend-project.vercel.app/fail`);
 });
 exports.failPayment = failPayment;
 const cancelPayment = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
@@ -55,7 +55,7 @@ const cancelPayment = (req, res) => __awaiter(void 0, void 0, void 0, function* 
     // if (!result) {
     //     return res.status(404).json({ error: "Transaction not found" });
     // }
-    return res.redirect(`https://tutorlink-frontend-1vtb2mly7-tafiyas-projects.vercel.app/cancel`);
+    return res.redirect(`https://tutor-link-frontend-project.vercel.app/cancel`);
 });
 exports.cancelPayment = cancelPayment;
 exports.getMyBookings = (0, catchAsync_1.catchAsync)((req, res) => __awaiter(void 0, void 0, void 0, function* () {

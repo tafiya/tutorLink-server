@@ -28,7 +28,7 @@ const order = await Payment.findOne({ transaction:transactionId });
 await RequestTutor.findByIdAndUpdate(order?.requestId, { isPayment: true }, { new: true });
 
         
-    return res.redirect(`https://tutorlink-frontend-1vtb2mly7-tafiyas-projects.vercel.app/success/${transactionId}`);
+    return res.redirect(`https://tutor-link-frontend-project.vercel.app/success/${transactionId}`);
 };
 export const failPayment = async (req: Request, res: Response) => {
     const { transactionId } = req.params;
@@ -37,7 +37,7 @@ export const failPayment = async (req: Request, res: Response) => {
     const result = await handleFailedOrCanceledPayment(transactionId, "failed");
  
 
-    return res.redirect(`https://tutorlink-frontend-1vtb2mly7-tafiyas-projects.vercel.app/fail`);
+    return res.redirect(`https://tutor-link-frontend-project.vercel.app/fail`);
 };
 
 export const cancelPayment = async (req: Request, res: Response) => {
@@ -49,7 +49,7 @@ export const cancelPayment = async (req: Request, res: Response) => {
     //     return res.status(404).json({ error: "Transaction not found" });
     // }
 
-    return res.redirect(`https://tutorlink-frontend-1vtb2mly7-tafiyas-projects.vercel.app/cancel`);
+    return res.redirect(`https://tutor-link-frontend-project.vercel.app/cancel`);
 };
 export const getMyBookings = catchAsync(async (req, res) => {
     const { userEmail } = req.params;

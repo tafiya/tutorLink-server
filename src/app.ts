@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: 'https://tutorlink-frontend-1vtb2mly7-tafiyas-projects.vercel.app', // Allow frontend origin
+    origin: 'https://tutor-link-frontend-project.vercel.app', // Allow frontend origin
     credentials: true, // Allow cookies and credentials
   }),
 );

@@ -23,7 +23,7 @@ const app = (0, express_1.default)();
 app.use(express_1.default.json());
 app.use((0, cookie_parser_1.default)());
 app.use((0, cors_1.default)({
-    origin: 'https://tutorlink-frontend-1vtb2mly7-tafiyas-projects.vercel.app', // Allow frontend origin
+    origin: 'https://tutor-link-frontend-project.vercel.app', // Allow frontend origin
     credentials: true, // Allow cookies and credentials
 }));
 // application routes

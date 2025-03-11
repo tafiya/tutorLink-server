@@ -31,9 +31,9 @@ console.log("updated request",updatedRequest)
         total_amount: amount,
         currency: "BDT",
         tran_id: transactionId,
-        success_url: `http://localhost:5000/api/payment/success/${transactionId}`,
-        fail_url: `http://localhost:5000/api/payment/fail`,
-        cancel_url: `http://localhost:5000/api/payment/cancel`,
+        success_url: `https://tutor-link-server-project.vercel.app/api/payment/success/${transactionId}`,
+        fail_url: `https://tutor-link-server-project.vercel.app/api/payment/fail`,
+        cancel_url: `https://tutor-link-server-project.vercel.app/api/payment/cancel`,
         ipn_url: 'http://localhost:3030/ipn',
         shipping_method: 'Courier',
         product_name: "Tutor Booking", // Tutor name as the product

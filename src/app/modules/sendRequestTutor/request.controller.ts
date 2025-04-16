@@ -7,7 +7,6 @@ import { StatusCodes } from "http-status-codes";
 
 
 const createRequest=catchAsync(async (req, res) => {
-console.log("from controller=",req.body)
   const result = await requestService.sendRequestService(req.body)
   sendResponse(res, {
     statusCode: StatusCodes.CREATED,
